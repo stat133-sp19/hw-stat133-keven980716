@@ -13,9 +13,9 @@ Background and Motivation
 
 Before 2016-2017 season began, Kevin Durant made the decision to join the Golden State Warriors, then Warriors were unstoppable in the following season. Finally, Warriors beat Cavaliers and won the final championship in 2016-2017 season.
 
-<img src="../images/Golden_State_Warriors.jpg" alt="*Warriors won the championship in 2016-2017 season*" width="100%" />
+<img src="../images/Golden_State_Warriors.jpg" alt="Warriors won the championship in 2016-2017 season" width="100%" />
 <p class="caption">
-*Warriors won the championship in 2016-2017 season*
+Warriors won the championship in 2016-2017 season
 </p>
 
 As we know, in order to win the final champion, one team should have excellent offence. Therefore, we want to see how good the Warriors' offence is by analyzing the shots data from Golden State Warriors' five star players.
@@ -26,6 +26,8 @@ Effective Shooting Percentages
 ### Data Processing
 
 First we use R to create three tables to display each player's 2-point field goal effective shooting percentage, 3-point field goal effective shooting percentage and overall field goal effective shooting percentage respectively. The R codes are attached below:
+
+#### 2 PT Effective Shooting Percentage by Player
 
 ``` r
 library(dplyr)
@@ -67,6 +69,8 @@ kable(two_pt,caption = "2 PT Effective Shooting Percentage by Player")
 | Klay Thompson  |    640|   329|   0.5140625|
 | Draymond Green |    346|   171|   0.4942197|
 
+#### 3 PT Effective Shooting Percentage by Player
+
 ``` r
 #create and display table of 3 PT  (arranged by percentage in descending order) 
 three_pt <- shots_data %>% group_by(name) %>%
@@ -87,6 +91,8 @@ kable(three_pt,caption = "3 PT Effective Shooting Percentage by Player")
 | Kevin Durant   |    272|   105|   0.3860294|
 | Andre Iguodala |    161|    58|   0.3602484|
 | Draymond Green |    232|    74|   0.3189655|
+
+#### Effective Shooting Percentage by Player (Overall Shots)
 
 ``` r
 #create and display table of overall shots  (arranged by percentage in descending order) 
@@ -115,16 +121,16 @@ Let's look at the first table, it dispalys the 2-point field goal effective shoo
 
 Futhermore, though Kevin Durant's 2-point field goal effective shooting percentage is not the highest, he tried almost three times 2-point shots as many as Andre Iguodala (who had the highest 2-point field goal effective shooting percentage) did. With lot of attempts, he could still keep relatively high shooting percentage, no wonder coach Kerr would always trust him to finish the final shot. Andre Iguodala had the highest 2-point field goal effective shooting percentage, it supported that he had the ability to play a significant role in some important games --- that's exactly what helped Warriors a lot in the finals. However, as for Draymond Green, we deduce that he might not be a top scorer because he didn't shoot a lot and the percentage was not very high.
 
-<img src="../images/Kevin_Durant.jpg" alt="*Kevin Durant*" width="100%" />
+<img src="../images/Kevin_Durant.jpg" alt="Kevin Durant" width="100%" />
 <p class="caption">
-*Kevin Durant*
+Kevin Durant
 </p>
 
 Stephen Curry and Klay Thompson, whom we often called them "Splash Brothers", didn't have the 2-point field goal effective shooting percentage as high as Kevin Durant did, but both their 3-point field goal effective shooting percentages in that season were higher than 40%. It did prove that they are two of the greatest 3-point shooters in current NBA league. If one of them has "hot hand" in the game, it is possibly that Warriors will win the game. Also, it can explain why Warriors always have very high score in one game --- they can make so many threes!
 
-<img src="../images/Splash_Brothers.jpg" alt="*Splash Brothers*" width="100%" />
+<img src="../images/Splash_Brothers.jpg" alt="Splash Brothers" width="100%" />
 <p class="caption">
-*Splash Brothers*
+Splash Brothers
 </p>
 
 We can also see that Draymond Green and Angre Iguodala were not good at shooting three. It is normal because it is impossible that everyone the team can shoot three well. When we watch the Warriors' games, we can find that they actually help the team more with their defence.

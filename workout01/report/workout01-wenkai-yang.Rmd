@@ -21,7 +21,7 @@ This report gives you a summary of shots data from Golden State Warriors' five s
 Before 2016-2017 season began, Kevin Durant made the decision to join the Golden State Warriors, then Warriors were unstoppable in the following season. Finally, Warriors beat Cavaliers and won the final championship in 2016-2017 season.
 
 
-```{r out.width='100%', echo=FALSE, fig.cap='*Warriors won the championship in 2016-2017 season*', fig.align='center'}
+```{r out.width='100%', echo=FALSE, fig.cap='Warriors won the championship in 2016-2017 season', fig.align='center'}
 library(knitr)
 include_graphics('../images/Golden_State_Warriors.jpg')
 ```
@@ -34,6 +34,7 @@ As we know, in order to win the final champion, one team should have excellent o
 
 First we use R to create three tables to display each player's 2-point field goal effective shooting percentage, 3-point field goal effective shooting percentage and overall field goal effective shooting percentage respectively. The R codes are attached below:
 
+#### 2 PT Effective Shooting Percentage by Player
 
 ```{r}
 library(dplyr)
@@ -53,6 +54,8 @@ two_pt <- shots_data %>% group_by(name) %>%
 kable(two_pt,caption = "2 PT Effective Shooting Percentage by Player")
 ```
 
+#### 3 PT Effective Shooting Percentage by Player
+
 ```{r}
 #create and display table of 3 PT  (arranged by percentage in descending order) 
 three_pt <- shots_data %>% group_by(name) %>%
@@ -65,6 +68,8 @@ three_pt <- shots_data %>% group_by(name) %>%
   
 kable(three_pt,caption = "3 PT Effective Shooting Percentage by Player")
 ```
+
+#### Effective Shooting Percentage by Player (Overall Shots)
 
 ```{r}
 #create and display table of overall shots  (arranged by percentage in descending order) 
@@ -89,14 +94,14 @@ Let's look at the first table, it dispalys the 2-point field goal effective shoo
 Futhermore, though Kevin Durant's 2-point field goal effective shooting percentage is not the highest, he tried almost three times 2-point shots as many as Andre Iguodala (who had the highest 2-point field goal effective shooting percentage) did. With lot of attempts, he could still keep relatively high shooting percentage, no wonder coach Kerr would always trust him to finish the final shot. Andre Iguodala had the highest 2-point field goal effective shooting percentage, it supported that he had the ability to play a significant role in some important games --- that's exactly what helped Warriors a lot in the finals. However, as for Draymond Green, we deduce that he might not be a top scorer because he didn't shoot a lot and the percentage was not very high.
 
 
-```{r out.width='100%', echo=FALSE, fig.cap='*Kevin Durant*', fig.align='center'}
+```{r out.width='100%', echo=FALSE, fig.cap='Kevin Durant', fig.align='center'}
 include_graphics('../images/Kevin_Durant.jpg')
 ```
 
 Stephen Curry and Klay Thompson, whom we often called them "Splash Brothers", didn't have the 2-point field goal effective shooting percentage as high as Kevin Durant did, but both their 3-point field goal effective shooting percentages in that season were higher than 40%. It did prove that they are two of the greatest 3-point shooters in current NBA league. If one of them has "hot hand" in the game, it is possibly that Warriors will win the game. Also, it can explain why Warriors always have very high score in one game --- they can make so many threes!
 
 
-```{r out.width='100%', echo=FALSE, fig.cap='*Splash Brothers*', fig.align='center'}
+```{r out.width='100%', echo=FALSE, fig.cap='Splash Brothers', fig.align='center'}
 include_graphics('../images/Splash_Brothers.jpg')
 ```
 
