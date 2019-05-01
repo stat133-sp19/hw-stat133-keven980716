@@ -18,10 +18,16 @@ source("R/private-auxiliary-functions.R")
 #' bin_choose(5, 1:3)
 
 bin_choose <- function(n, k) {
-  if (FALSE %in% (k %% 1 == 0)) {
+  if (length(n) != 1) {
+    stop("n has to be length of 1")
+  } else if (n %% 1 != 0) {
+    stop("n should be a integer")
+  } else if (n < 0) {
+    stop("n should be non-negative")
+  } else if (FALSE %in% (k %% 1 == 0)) {
     stop("k should be integer(s)")
   } else if (TRUE %in% (k < 0)) {
-    stop("k cannot be negative")
+    stop("k should be non-negative")
   } else if (TRUE %in% (k > n)) {
     stop("k cannot be greater than n")
   } else {
