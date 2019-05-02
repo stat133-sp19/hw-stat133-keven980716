@@ -29,8 +29,8 @@ test_that("aux_mode works with valid inputs", {
 
   expect_length(aux_mode(10, 0.3), 1)
   expect_equal(aux_mode(10, 0.3), 3)
-  expect_type(aux_mode(10, 0.3), 'double')
-  expect_equal(aux_mode(10,0.5), floor(0.5 * (10 + 1)))
+  expect_type(aux_mode(10, 0.3), 'integer')
+  expect_equal(aux_mode(10,0.5), as.integer(floor(0.5 * (10 + 1))))
 })
 
 
