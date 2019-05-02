@@ -22,9 +22,9 @@ aux_variance <- function(trials, prob) {
 aux_mode <- function(trials, prob) {
   m <- floor(prob * (trials + 1))
   if ((prob * (trials + 1)) %% 1 == 0) {
-    return(c(m, m-1))
+    return(as.integer(c(m, m-1)))
   } else {
-    return(m)
+    return(as.integer(m))
   }
 }
 
